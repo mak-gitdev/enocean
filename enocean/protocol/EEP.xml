@@ -1429,6 +1429,119 @@
             <item description="Failure" value="1" />
           </enum>
         </data>
+        <data direction="2">
+          <value shortcut="POS" description="Valve Position" offset="0" size="8" unit="%">
+            <range>
+              <min>0</min>
+              <max>100</max>
+            </range>
+            <scale>
+              <min>0</min>
+              <max>100</max>
+            </scale>
+          </value>
+          <value shortcut="TSP" description="Temperature Set Point" offset="8" size="8" unit="°C">
+            <range>
+              <min>0</min>
+              <max>255</max>
+            </range>
+            <scale>
+              <min>10</min>
+              <max>30</max>
+            </scale>
+          </value>
+          <enum shortcut="MC" description="Measure Control" offset="17" size="1">
+            <item description="Enable" value="0" />
+            <item description="Disable" value="1" />
+          </enum>
+          <enum shortcut="WUC" description="Wake Up Cycle" offset="18" size="6">
+            <item description="10 sec" value="0" />
+            <item description="60 sec" value="1" />
+            <item description="90 sec" value="2" />
+            <item description="120 sec" value="3" />
+            <item description="150 sec" value="4" />
+            <item description="180 sec" value="5" />
+            <item description="210 sec" value="6" />
+            <item description="240 sec" value="7" />
+            <item description="270 sec" value="8" />
+            <item description="300 sec" value="9" />
+            <item description="330 sec" value="10" />
+            <item description="360 sec" value="11" />
+            <item description="390 sec" value="11" />
+            <item description="420 sec" value="12" />
+            <item description="450 sec" value="13" />
+            <item description="450 sec" value="14" />
+            <item description="480 sec" value="15" />
+            <item description="510 sec" value="16" />
+            <item description="540 sec" value="17" />
+            <item description="570 sec" value="18" />
+            <item description="600 sec" value="19" />
+            <item description="630 sec" value="20" />
+            <item description="660 sec" value="21" />
+            <item description="690 sec" value="22" />
+            <item description="720 sec" value="23" />
+            <item description="750 sec" value="24" />
+            <item description="780 sec" value="25" />
+            <item description="810 sec" value="26" />
+            <item description="840 sec" value="27" />
+            <item description="870 sec" value="28" />
+            <item description="900 sec" value="29" />
+            <item description="930 sec" value="30" />
+            <item description="960 sec" value="31" />
+            <item description="990 sec" value="32" />
+            <item description="1020 sec" value="33" />
+            <item description="1050 sec" value="34" />
+            <item description="1080 sec" value="35" />
+            <item description="1110 sec" value="36" />
+            <item description="1140 sec" value="37" />
+            <item description="1170 sec" value="38" />
+            <item description="1200 sec" value="39" />
+            <item description="1230 sec" value="40" />
+            <item description="1260 sec" value="41" />
+            <item description="1290 sec" value="42" />
+            <item description="1320 sec" value="43" />
+            <item description="1350 sec" value="44" />
+            <item description="1380 sec" value="45" />
+            <item description="1410 sec" value="46" />
+            <item description="1440 sec" value="47" />
+            <item description="1470 sec" value="48" />
+            <item description="1500 sec" value="49" />
+            <item description="3 hrs" value="50" />
+            <item description="6 hrs" value="51" />
+            <item description="9 hrs" value="52" />
+            <item description="12 hrs" value="53" />
+            <item description="15 hrs" value="54" />
+            <item description="18 hrs" value="55" />
+            <item description="21 hrs" value="56" />
+            <item description="24 hrs" value="57" />
+            <item description="27 hrs" value="58" />
+            <item description="30 hrs" value="59" />
+            <item description="33 hrs" value="60" />
+            <item description="36 hrs" value="61" />
+            <item description="39 hrs" value="62" />
+            <item description="42 hrs (max)" value="63" />
+          </enum>
+          <enum shortcut="DSO" description="Display Orientation" offset="26" size="2">
+            <item description="0°" value="0" />
+            <item description="90°" value="1" />
+            <item description="180°" value="2" />
+            <item description="270°" value="3" />
+          </enum>
+          <enum shortcut="LRNB" description="LRN Bit" offset="28" size="1">
+            <item description="Teach-in telegramm" value="0" />
+            <item description="Data telegramm" value="1" />
+          </enum>
+          <enum shortcut="BLC" description="Button Lock Control" offset="29" size="1">
+            <item description="Unlocked" value="0" />
+            <item description="Locked" value="1" />
+          </enum>
+          <enum shortcut="SER" description="Service command" offset="30" size="2">
+            <item description="No change" value="0" />
+            <item description="Open valve" value="1" />
+            <item description="Run initialisation" value="2" />
+            <item description="Close valve" value="3" />
+          </enum>
+        </data>
       </profile>
     </profiles>
     <profiles func="0x30" description="Digital Input">
