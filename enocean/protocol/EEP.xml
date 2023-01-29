@@ -1404,10 +1404,6 @@
             <item description="No change" value="0" />
             <item description="status request" value="1" />
           </enum>
-          <enum shortcut="LRNB" description="LRN Bit" offset="28" size="1">
-            <item description="Teach-in telegramm" value="0" />
-            <item description="Data telegramm" value="1" />
-          </enum>
           <enum shortcut="BLS" description="Button Lock Status" offset="29" size="1">
             <item description="Unlocked" value="0" />
             <item description="Locked" value="1" />
