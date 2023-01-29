@@ -1515,10 +1515,6 @@
             <item description="180°" value="2" />
             <item description="270°" value="3" />
           </enum>
-          <enum shortcut="LRNB" description="LRN Bit" offset="28" size="1">
-            <item description="Teach-in telegramm" value="0" />
-            <item description="Data telegramm" value="1" />
-          </enum>
           <enum shortcut="BLC" description="Button Lock Control" offset="29" size="1">
             <item description="Unlocked" value="0" />
             <item description="Locked" value="1" />
