@@ -1389,20 +1389,12 @@
               <min>0</min>
               <max>255</max>
             </range>
-            <scale>
-              <min>10</min>
-              <max>30</max>
-            </scale>
           </value>
           <value shortcut="TMPFC" description="Room Temperature OR Failure Code" offset="16" size="8" unit="°C">
             <range>
               <min>0</min>
               <max>255</max>
             </range>
-            <scale>
-              <min>10</min>
-              <max>30</max>
-            </scale>
           </value>
           <enum shortcut="MST" description="Measure Status" offset="24" size="1">
             <item description="active" value="0" />
