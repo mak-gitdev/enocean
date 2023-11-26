@@ -1790,6 +1790,26 @@
           </enum>
         </data>
       </profile>
+      <profile type="0x09" description="Window/Door-Sensor with States Open/Closed/Tilt, Supply voltage monitor">
+        <data>
+          <value description="Supply voltage / super cap. (linear)" shortcut="SVC" offset="0" size="8" unit="V">
+            <range>
+              <min>0</min>
+              <max>250</max>
+            </range>
+            <scale>
+              <min>0</min>
+              <max>5.0</max>
+            </scale>
+          </value>
+          <enum description="Contact" shortcut="CT" offset="29" size="2">
+            <item description="Closed" value="0" />
+            <item description="Tilt" value="1" />
+            <item description="Reserved" value="2" />
+            <item description="Open" value="3" />
+          </enum>
+        </data>
+      </profile>
       <profile type="0x0A" description="Window/Door-Sensor with States Open/Closed/Tilt, Supply voltage monitor and Vibration detection">
         <data>
           <value description="Supply voltage / super cap. (linear)" shortcut="SVC" offset="0" size="8" unit="V">

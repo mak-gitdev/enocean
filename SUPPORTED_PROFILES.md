@@ -851,6 +851,18 @@ All profiles (should) correspond to the official [EEP](http://www.enocean-allian
 
 </blockquote></details>
 
+<details><summary>A5-14-09 <i>(Window/Door-Sensor with States Open/Closed/Tilt, Supply voltage monitor)</i></summary><blockquote>
+
+| shortcut | description                          | type  | values                |
+| -------- | ------------------------------------ | ----- | --------------------- |
+| SVC      | Supply voltage / super cap. (linear) | value | 0.0-250.0 ↔ 0.0-5.0 V |
+| CT       | Contact                              | enum  | 0 - Closed            |
+|          |                                      |       | 1 - Tilt              |
+|          |                                      |       | 2 - Reserved          |
+|          |                                      |       | 3 - Open              |
+
+</blockquote></details>
+
 <details><summary>A5-14-0A <i>(Window/Door-Sensor with States Open/Closed/Tilt, Supply voltage monitor and Vibration detection)</i></summary><blockquote>
 
 |shortcut|description                                       |type    |values                                                                |
