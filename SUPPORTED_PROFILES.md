@@ -872,7 +872,7 @@ All profiles (should) correspond to the official [EEP](http://www.enocean-allian
 |        |                                                  |        |1 - Tilt                                                              |
 |        |                                                  |        |2 - Reserved                                                          |
 |        |                                                  |        |3 - Open                                                              |
-|VIB     |Contact                                           |enum    |1 - Vibration detected                                                |
+|VIB     |Vibration                                         |enum    |1 - Vibration detected                                                |
 |        |                                                  |        |0 - No vibration detected                                             |
 
 </blockquote></details>

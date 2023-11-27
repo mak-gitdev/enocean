@@ -1828,7 +1828,7 @@
             <item description="Reserved" value="2" />
             <item description="Open" value="3" />
           </enum>
-          <enum description="Contact" shortcut="VIB" offset="31" size="1">
+          <enum description="Vibration" shortcut="VIB" offset="31" size="1">
             <item description="Vibration detected" value="1" />
             <item description="No vibration detected" value="0" />
           </enum>
