@@ -149,18 +149,21 @@ class Packet(object):
             return PARSE_RESULT.CRC_MISMATCH, buf, None
 
         # If we got this far, everything went ok (?)
-        if packet_type == PACKET.RADIO_ERP1:
-            # Need to handle UTE Teach-in here, as it's a separate packet type...
-            if data[0] == RORG.UTE:
-                packet = UTETeachInPacket(packet_type, data, opt_data)
+        try:
+            if packet_type == PACKET.RADIO_ERP1:
+                # Need to handle UTE Teach-in here, as it's a separate packet type...
+                if data[0] == RORG.UTE:
+                    packet = UTETeachInPacket(packet_type, data, opt_data)
+                else:
+                    packet = RadioPacket(packet_type, data, opt_data)
+            elif packet_type == PACKET.RESPONSE:
+                packet = ResponsePacket(packet_type, data, opt_data)
+            elif packet_type == PACKET.EVENT:
+                packet = EventPacket(packet_type, data, opt_data)
             else:
-                packet = RadioPacket(packet_type, data, opt_data)
-        elif packet_type == PACKET.RESPONSE:
-            packet = ResponsePacket(packet_type, data, opt_data)
-        elif packet_type == PACKET.EVENT:
-            packet = EventPacket(packet_type, data, opt_data)
-        else:
-            packet = Packet(packet_type, data, opt_data)
+                packet = Packet(packet_type, data, opt_data)
+        except IndexError:
+            return PARSE_RESULT.INCOMPLETE, buf, None
 
         return PARSE_RESULT.OK, buf, packet
 

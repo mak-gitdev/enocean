@@ -39,7 +39,7 @@ class SerialCommunicator(Communicator):
             try:
                 self.parse()
             except Exception as e:
-                self.logger.error('Exception occured while parsing: ' + str(e))
+                self.logger.exception('Exception occured while parsing: ')
             time.sleep(0)
 
         self.__ser.close()
