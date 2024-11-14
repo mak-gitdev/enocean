@@ -3924,6 +3924,226 @@
         </data>
       </profile>
     </profiles>
+    <profiles func="0x06" description="Multisensor Window Handle">
+      <profile type="0x01" description="Alarm, Position Sensor, Vacation Mode, Optional Sensors">
+        <command description="Message Type" shortcut="MT" offset="0" size="8">
+          <item description="Sensor Values" value="0" />
+          <item description="Configuration Report" value="16" />
+          <item description="Log Data 01" value="32" />
+          <item description="Log Data 02" value="33" />
+          <item description="Log Data 03" value="34" />
+          <item description="Log Data 04" value="35" />
+          <item description="Control and Settings" value="128" />
+        </command>
+        <data command="0" bits="10">
+          <enum description="Message Type" shortcut="MT" offset="0" size="8">
+            <rangeitem description="Message Type {value}" start="0" end="128" />
+            <rangeitem description="Reserved" start="129" end="255" />
+          </enum>
+          <enum description="Burglary Alarm" shortcut="BAL" offset="8" size="4">
+            <item description="Burglary Alarm Not Triggered" value="0" />
+            <item description="Burglary Alarm Triggered" value="1" />
+            <rangeitem description="Reserved" start="2" end="13" />
+            <item description="Invalid" value="14" />
+            <item description="Not supported" value="15" />
+          </enum>
+          <enum description="Protection Plus Alarm" shortcut="PPAL" offset="12" size="4">
+            <item description="Protection Plus Alarm Not Triggered" value="0" />
+            <item description="Protection Plus Alarm Triggered" value="1" />
+            <rangeitem description="Reserved" start="2" end="13" />
+            <item description="Invalid" value="14" />
+            <item description="Not supported" value="15" />
+          </enum>
+          <enum description="Handle Position" shortcut="HP" offset="16" size="4">
+            <item description="Handle Position Undefined" value="0" />
+            <item description="Handle Up" value="1" />
+            <item description="Handle Down" value="2" />
+            <item description="Handle Left" value="3" />
+            <item description="Handle Right" value="4" />
+            <rangeitem description="Reserved" start="5" end="13" />
+            <item description="Invalid" value="14" />
+            <item description="Not supported" value="15" />
+          </enum>
+          <enum description="Window State" shortcut="WS" offset="20" size="4">
+            <item description="Window State Undefined" value="0" />
+            <item description="Window Not Tilted" value="1" />
+            <item description="Window Tilted" value="2" />
+            <rangeitem description="Reserved" start="3" end="13" />
+            <item description="Invalid" value="14" />
+            <item description="Not supported" value="15" />
+          </enum>
+          <enum description="Button Right" shortcut="BR" offset="24" size="4">
+            <item description="No Change" value="0" />
+            <item description="Button Pressed" value="1" />
+            <item description="Button Released" value="2" />
+            <rangeitem description="Reserved" start="3" end="13" />
+            <item description="Invalid" value="14" />
+            <item description="Not supported" value="15" />
+          </enum>
+          <enum description="Button Left" shortcut="BL" offset="28" size="4">
+            <item description="No Change" value="0" />
+            <item description="Button Pressed" value="1" />
+            <item description="Button Released" value="2" />
+            <rangeitem description="Reserved" start="3" end="13" />
+            <item description="Invalid" value="14" />
+            <item description="Not supported" value="15" />
+          </enum>
+          <enum description="Motion" shortcut="M" offset="32" size="4">
+            <item description="Motion Not Triggered" value="0" />
+            <item description="Motion Triggered" value="1" />
+            <rangeitem description="Reserved" start="2" end="13" />
+            <item description="Invalid" value="14" />
+            <item description="Not supported" value="15" />
+          </enum>
+          <enum description="Vacation Mode" shortcut="V" offset="36" size="4">
+            <item description="No Change" value="0" />
+            <item description="Vacation Mode Locally Switched On" value="1" />
+            <item description="Vacation Mode Locally Switched Off" value="2" />
+            <rangeitem description="Reserved" start="3" end="13" />
+            <item description="Invalid" value="14" />
+            <item description="Not supported" value="15" />
+          </enum>
+          <enum description="Temperature" shortcut="T" offset="40" size="8" unit="°C">
+            <rangeitem description="Temperature {value}" start="0" end="250" />
+            <rangeitem description="Reserved" start="251" end="253" />
+            <item description="Invalid" value="254" />
+            <item description="Not supported" value="255" />
+          </enum>
+          <enum description="Humidity" shortcut="H" offset="48" size="8" unit="%">
+            <rangeitem description="Humidity {value}" start="0" end="200" />
+            <rangeitem description="Reserved" start="201" end="253" />
+            <item description="Invalid" value="254" />
+            <item description="Not supported" value="255" />
+          </enum>
+          <enum description="Illumination" shortcut="I" offset="56" size="16" unit="lx">
+            <rangeitem description="{value} lx" start="0" end="60000" />
+            <item description="Over Range" value="60001" />
+            <rangeitem description="Reserved" start="60002" end="65533" />
+            <item description="Invalid" value="65534" />
+            <item description="Not supported" value="65535" />
+          </enum>
+          <enum description="Battery State" shortcut="BS" offset="72" size="5" unit="%">
+            <rangeitem description="Battery State {value}" start="0" end="20" />
+            <rangeitem description="Reserved" start="21" end="31" />
+          </enum>
+        </data>
+        <data command="16" bits="5">
+          <enum description="Message Type" shortcut="MT" offset="0" size="8">
+            <rangeitem description="Message Type {value}" start="0" end="128" />
+            <rangeitem description="Reserved" start="129" end="255" />
+          </enum>
+          <enum description="Vacation Mode" shortcut="VMR" offset="8" size="1">
+            <item description="Vacation Mode is Off" value="0" />
+            <item description="Vacation Mode is On" value="1" />
+          </enum>
+          <enum description="Handle Closed Click" shortcut="HCCR" offset="9" size="1">
+            <item description="Handle Closed Click Feature is Disabled" value="0" />
+            <item description="Handle Closed Click Feature is Enabled" value="1" />
+          </enum>
+          <enum description="Battery Low Click" shortcut="BLCR" offset="10" size="1">
+            <item description="Battery Low Click Feature is Disabled" value="0" />
+            <item description="Battery Low Click Feature is Enabled" value="1" />
+          </enum>
+          <enum description="Sensor Update Interval" shortcut="SUIR" offset="16" size="16">
+            <rangeitem description="Reserved" start="0" end="4" />
+            <rangeitem description="{value} s" start="5" end="65535" />
+          </enum>
+          <enum description="Vacation Blink Interval" shortcut="VBIR" offset="32" size="8">
+            <rangeitem description="Reserved" start="0" end="2" />
+            <rangeitem description="{value} s" start="3" end="255" />
+          </enum>
+        </data>
+        <data command="32" bits="9">
+          <enum description="Message Type" shortcut="MT" offset="0" size="8">
+            <rangeitem description="Message Type {value}" start="0" end="128" />
+            <rangeitem description="Reserved" start="129" end="255" />
+          </enum>
+          <enum description="Power Ons" shortcut="PON" offset="8" size="32">
+            <rangeitem description="Power Ons {value}" start="0" end="4294967295" />
+          </enum>
+          <enum description="Alarms" shortcut="ALL" offset="40" size="32">
+            <rangeitem description="Alarms {value}" start="0" end="4294967295" />
+          </enum>
+        </data>
+        <data command="33" bits="13">
+          <enum description="Message Type" shortcut="MT" offset="0" size="8">
+            <rangeitem description="Message Type {value}" start="0" end="128" />
+            <rangeitem description="Reserved" start="129" end="255" />
+          </enum>
+          <enum description="Handle Movements Closed" shortcut="HMC" offset="8" size="32">
+            <rangeitem description="Handle Movements Closed {value}" start="0" end="4294967295" />
+          </enum>
+          <enum description="Handle Movements Opened" shortcut="HMO" offset="40" size="32">
+            <rangeitem description="Handle Movements Opened {value}" start="0" end="4294967295" />
+          </enum>
+          <enum description="Handle Movements Tilted" shortcut="HMT" offset="72" size="32">
+            <rangeitem description="Handle Movements Tilted {value}" start="0" end="4294967295" />
+          </enum>
+        </data>
+        <data command="34" bits="5">
+          <enum description="Message Type" shortcut="MT" offset="0" size="8">
+            <rangeitem description="Message Type {value}" start="0" end="128" />
+            <rangeitem description="Reserved" start="129" end="255" />
+          </enum>
+          <enum description="Window Tilts" shortcut="WT" offset="8" size="32">
+            <rangeitem description="Window Tilts {value}" start="0" end="4294967295" />
+          </enum>
+        </data>
+        <data command="35" bits="9">
+          <enum description="Message Type" shortcut="MT" offset="0" size="8">
+            <rangeitem description="Message Type {value}" start="0" end="128" />
+            <rangeitem description="Reserved" start="129" end="255" />
+          </enum>
+          <enum description="Button Right Presses" shortcut="BRP" offset="8" size="32">
+            <rangeitem description="Button Right Presses {value}" start="0" end="4294967295" />
+          </enum>
+          <enum description="Button Left Presses" shortcut="BLP" offset="40" size="32">
+            <rangeitem description="Button Left Presses {value}" start="0" end="4294967295" />
+          </enum>
+        </data>
+        <data command="128" bits="5">
+          <enum description="Message Type" shortcut="MT" offset="0" size="8">
+            <rangeitem description="Message Type {value}" start="0" end="128" />
+            <rangeitem description="Reserved" start="129" end="255" />
+          </enum>
+          <enum description="Get Configuration Settings" shortcut="GCS" offset="8" size="1">
+            <item description="No Change" value="0" />
+            <item description="Start Transmission" value="1" />
+          </enum>
+          <enum description="Get Log Data" shortcut="GLD" offset="9" size="1">
+            <item description="No Change" value="0" />
+            <item description="Start Transmission" value="1" />
+          </enum>
+          <enum description="Vacation Mode" shortcut="VMS" offset="10" size="1">
+            <item description="Switch Vacation Mode Off" value="0" />
+            <item description="Switch Vacation Mode On" value="1" />
+          </enum>
+          <enum description="Handle Closed Click" shortcut="HCCS" offset="11" size="2">
+            <item description="No Change" value="0" />
+            <item description="Disable Handle Closed Click Feature" value="1" />
+            <item description="Enable Handle Closed Click Feature" value="2" />
+            <item description="Reserved" value="3" />
+          </enum>
+          <enum description="Battery Low Click" shortcut="BLCS" offset="13" size="3">
+            <item description="No Change" value="0" />
+            <item description="Disable Battery Low Click Feature" value="1" />
+            <item description="Enable Battery Low Click Feature" value="2" />
+            <item description="Reserved" value="3" />
+            <rangeitem description="Unused" start="4" end="7" />
+          </enum>
+          <enum description="Sensor Update Interval" shortcut="SUIS" offset="16" size="16">
+            <item description="No Change" value="0" />
+            <rangeitem description="Reserved" start="1" end="4" />
+            <rangeitem description="{value} s" start="5" end="65535" />
+          </enum>
+          <enum description="Vacation Blink Interval" shortcut="VBIS" offset="32" size="8">
+            <item description="No Change" value="0" />
+            <rangeitem description="Reserved" start="1" end="2" />
+            <rangeitem description="{value} s" start="3" end="255" />
+          </enum>
+        </data>
+      </profile>
+    </profiles>
     <profiles func="0x14" description="Multi Function Sensors">
       <profile type="0x30" description="Sensor for Smoke, Air quality, Hygrothermal comfort, Temperature and Humidity">
         <data bits="6">
